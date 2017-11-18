@@ -1,9 +1,135 @@
 @import '_vars';
 // Portfolio Grid FallBack older Browsers
-// Portfolio navigation
+.portfolio{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 200px;
+  // Portfolio navigation
+  section[role="navigation"]{
+    flex: 1 1 100%;
+    order: 1;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    order: 1;
+    flex-wrap: wrap;
+    @media #{$tablet}{
+      margin-left: 0;
+    }
+    // Filter links
+    a{
+      color: #324B51;
+      font-size: 1.8em;
+      font-family: $sourceSans;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 5px 2%;
+      @media #{$mobile}{
+        flex: 1 1 25%;
+      }
+      @media #{$smallMobile}{
+        flex: 1 1 25%;
+      }
+    }
+    // Portfolio header
+    h1{
+      margin: 0 2% 0 0;
+      @media #{$mobile}{
+        flex: 1 1 100%;
+      }
+      @media #{$smallMobile}{
+        flex: 1 1 100%;
+      }
+    }
+    // Search bar
+    input{
+      flex: 1 2 200px;
+      height: 35px;
+      padding: 0 12px;
+      font-family: $sourceSans;
+      font-size: 1.6em;
+      font-weight: 600;
+      border-radius: 0;
+      border: 3px solid $textCol;
+      margin: 10px 0;
+    }
+  }
+  // End portfolio navigation
+  // Portfolio item
+  section{
+    flex: 0 1 45%;
+    order: 3;
+    display: inline-flex;
+    align-items: flex-start;
+    max-width: 45%;
+    margin: 0 0 25px 0;
+    @media #{$tablet}{
+      flex: 1 0 80%;
+      max-width: 80%;
+      margin-left: 10%;
+    }
+    @media #{$smToPor}{
+      flex: 1 0 100%;
+      max-width: 100%;
+    }
+    // Portfolio item Image
+    img{
+      flex: 1 1 25%;
+      width: 25%;
+      height: auto;
+      @media #{$mobile}{
+        display: none;
+      }
+      @media #{$smallMobile}{
+        display: none;
+      }
+    }
+    // Pinned item
+    &.pinned{
+      order: 2;
+    }
+    // Images where height is less then width
+    &.rectangle{
+      img{
+        flex: 1 1 40%;
+        width: 40%;
+      }
+      @media #{$smToPor}{
+        flex-wrap: wrap;
+      }
+      img{
+        @media #{$smToPor}{
+          flex: 1 1 100%;
+          width: 100%;
+        }
+      }
+    }
+    // Portfolio Item Desc
+    div{
+      background-color: #EBEBEB;
+      padding: 14px;
+      flex: 3 1 75%;
+      align-self: stretch;
+      margin-left: 10px;
+      // Portfolio Item link
+      a{
+        color: $textCol;
+      }
+    }
+  }
+  // Show more button
+  a[role="button"]{
+    order: 4;
+    flex: 0;
+    margin: 0 auto;
+  }
+}
 
 // CSS-grid (Currently aligned browsers)
 @supports(display: grid){
+  // Main grid
   .portfolio{
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -20,12 +146,16 @@
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-column-gap: 10px;
+      max-width: 100%;
+      margin: 0;
       &.pinned{
         order: 2;
       }
+      // Portfolio item img
       img{
         grid-column: span 4;
         width: 100%;
+        max-width: 100%;
         @media #{$mobile}{
           display: none;
         }
@@ -33,29 +163,37 @@
           display: none;
         }
       }
+      // Portfolio item description
       div{
         grid-column: span 8;
         background-color: #EBEBEB;
         padding: 14px;
+        max-width: 100%;
+        margin-left: 0;
         @media #{$mobile}{
           grid-column: span 12;
         }
         @media #{$smallMobile}{
           grid-column: span 12;
         }
+        // The h2 link (links to portfolio item)
         a{
           color: $textCol;
         }
       }
+      // If the image width is bigger then its height
       &.rectangle{
+        max-width: 100%;
         img{
           grid-column: span 6;
+          width: 100%;
           @media #{$smToPor}{
             grid-column: span 12;
           }
         }
         div{
           grid-column: span 6;
+          max-width: 100%;
           @media #{$smToPor}{
             grid-column: span 12;
           }
@@ -82,6 +220,7 @@
       align-items: baseline;
       order: 1;
       flex-wrap: wrap;
+      // Filter links
       a{
         color: #324B51;
         font-size: 1.8em;
@@ -96,6 +235,7 @@
           flex: 1 1 25%;
         }
       }
+      // Portfolio header
       h1{
         margin: 0 2% 0 0;
         @media #{$mobile}{
@@ -105,6 +245,7 @@
           flex: 1 1 100%;
         }
       }
+      // Search bar
       input{
         flex: 1 2 200px;
         height: 35px;
@@ -117,6 +258,7 @@
         margin: 10px 0;
       }
     }
+    // Show more button
     a[role="button"]{
       order: 4;
       grid-column: 5 / span 4;
@@ -125,5 +267,4 @@
       }
     }
   }
-
 }
