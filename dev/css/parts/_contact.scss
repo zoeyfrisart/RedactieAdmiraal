@@ -1,0 +1,84 @@
+@import '_vars';
+
+.contact{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  h1{
+    flex: 1 1 100%;
+    margin-bottom: 40px;
+  }
+  .contact--trudy {
+    // height: 35.16%;
+    width: 16.74vw;
+    display: inline-block;
+    position: relative;
+    margin: 0 7.5px;
+    @media #{$laptop}{
+      width: 20vw;
+    }
+    @media #{$tablet}{
+      width: 25vw;
+    }
+    @media #{$porTablet}{
+      width: 27vw;
+    }
+    @media #{$mobile}{
+      width: 40%;
+    }
+    @media #{$smallMobile}{
+      display: none;
+    }
+    img{
+      object-fit: cover;
+      object-position: center center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .contact--aside{
+    display: inline-block;
+    width: 23.61vw;
+    position: relative;
+    margin: 0 7.5px;
+    @media #{$laptop}{
+      width: 28vw;
+    }
+    @media #{$tablet}{
+      width: 32vw;
+    }
+    @media #{$porTablet}{
+      width: 34vw;
+      p{
+        font-size: 1.6em;
+      }
+    }
+    @media #{$mobile}{
+      width: 50%;
+      p{
+        font-size: 1.5em;
+      }
+    }
+    @media #{$smallMobile}{
+      width: 100%;
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+    .contact--aside__innerwrap{
+      padding: 15px 10px;
+      a{
+        color: $textCol;
+        text-decoration: none;
+      }
+    }
+    .contact--aside__social{
+      margin-top: 10px;
+      img{
+        height: 36px;
+        width: auto;
+      }
+    }
+  }
+}
