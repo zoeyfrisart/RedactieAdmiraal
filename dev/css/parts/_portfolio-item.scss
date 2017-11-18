@@ -1,0 +1,81 @@
+@import '_vars';
+
+// Main Wrapper
+.portfolio-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 100px;
+  // Back arrow
+  section[role="navigation"]{
+    flex: 0 1 100%;
+    margin-bottom: 15px;
+    img{
+      width: 35px;
+    }
+  }
+  // Portfolio item
+  .portfolio-item--image {
+    // height: 35.16%;
+    width: 16.74vw;
+    display: inline-block;
+    position: relative;
+    margin: 0 7.5px;
+    @media #{$laptop}{
+      width: 20vw;
+    }
+    @media #{$tablet}{
+      width: 25vw;
+    }
+    @media #{$porTablet}{
+      width: 27vw;
+    }
+    @media #{$mobile}{
+      width: 40%;
+    }
+    @media #{$smallMobile}{
+      display: none;
+    }
+    img{
+      object-fit: cover; // Makes the image Fill the div. (like background-size: cover;)
+      object-position: center center; // Basicly backround-position: center center;
+      width: 100%; //Makes the image width 100% of the parent div
+      height: 100%; // Makes the image height 100% of the parent div
+    }
+  }
+  .portfolio-item--desc{
+    display: inline-block;
+    width: 23.61vw;
+    position: relative;
+    margin: 0 7.5px;
+    padding: 15px 10px;
+    background-color: #EBEBEB;
+    p{
+      margin-bottom: 15px;
+    }
+    h3{
+      font-size: 2.1em;
+    }
+    @media #{$laptop}{
+      width: 28vw;
+    }
+    @media #{$tablet}{
+      width: 32vw;
+    }
+    @media #{$porTablet}{
+      width: 34vw;
+      p{
+        font-size: 1.6em;
+      }
+    }
+    @media #{$mobile}{
+      width: 50%;
+      p{
+        font-size: 1.5em;
+      }
+    }
+    @media #{$smallMobile}{
+      width: 100%;
+    }
+  }
+}
