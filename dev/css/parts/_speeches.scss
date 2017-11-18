@@ -1,0 +1,62 @@
+@import '_vars';
+
+.speeches{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  h1{
+    flex: 1 0 100%;
+    margin: 10px 2.5% 15px;
+  }
+  section{
+    flex: 1 1 50%;
+    padding: 0 2.5% 20px;
+    .moreText{
+      display: none;
+      &.moreText--Open{
+        display: block;
+      }
+    }
+    @media #{$smToPor}{
+      flex: 0 1 90%;
+      margin: 0 5%;
+    }
+    @media #{$tablet}{
+      flex: 0 1 80%;
+      margin: 0 10%;
+    }
+    @media #{$mobile}{
+      flex: 0 1 95%;
+      margin: 0 2.5%;
+    }
+    @media #{$smallMobile}{
+      flex: 0 1 100%;
+      margin: 0;
+    }
+  }
+  a[role="button"]{
+    flex: 0;
+    margin: 0 auto;
+  }
+  blockquote{
+    font-size: 1.7em;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    padding-left: 15px;
+    border-left: 3px solid #ccc;
+    font-style: italic;
+    footer{
+      color: #444444;
+      font-style: italic;
+      font-size: 0.8em;
+    }
+  }
+}
+
+// Show more button
+#showMore{
+  font-size: 1.8em;
+  text-decoration: underline;
+  margin: 10px 0;
+}

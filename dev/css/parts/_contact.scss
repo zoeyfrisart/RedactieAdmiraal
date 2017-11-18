@@ -1,5 +1,5 @@
 @import '_vars';
-
+// Main content
 .contact{
   display: flex;
   justify-content: center;
@@ -8,6 +8,7 @@
     flex: 1 1 100%;
     margin-bottom: 40px;
   }
+  // Afbeelding van Trudy.
   .contact--trudy {
     // height: 35.16%;
     width: 16.74vw;
@@ -30,12 +31,13 @@
       display: none;
     }
     img{
-      object-fit: cover;
-      object-position: center center;
-      width: 100%;
-      height: 100%;
+      object-fit: cover; // Makes the image Fill the div. (like background-size: cover;)
+      object-position: center center; // Basicly backround-position: center center;
+      width: 100%; //Makes the image width 100% of the parent div
+      height: 100%; // Makes the image height 100% of the parent div
     }
   }
+  // Visitekaartje en text wrap
   .contact--aside{
     display: inline-block;
     width: 23.61vw;
@@ -62,17 +64,21 @@
     @media #{$smallMobile}{
       width: 100%;
     }
+    // Visitekaartje afbeelding
     img{
       width: 100%;
       height: auto;
     }
+    // Wrap Text
     .contact--aside__innerwrap{
       padding: 15px 10px;
+      // Mail to link.
       a{
         color: $textCol;
         text-decoration: none;
       }
     }
+    // Social Icons.
     .contact--aside__social{
       margin-top: 10px;
       img{
