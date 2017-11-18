@@ -5,14 +5,14 @@
   position: relative;
   z-index: 3;
   width: 450px;
-  transform: translateX(-25px);
+  transform: translateX(-25px); // moves the Text block 25xp up.
   @media #{$tablet}{
     margin-top: 40px;
     width: 425px;
   }
   @media #{$smToPor}{
     width: 100%;
-    transform: translate(0);
+    transform: translate(0); // Removes the 25px up.
   }
 }
 
@@ -23,7 +23,7 @@ span{
 // Drawing CSS
 .home--drawing{
   width: 500px;
-  height: auto;
+  height: auto; // To prevent the image of stretching.
   position: relative;
   display: inline-block;
   top: -100px;
@@ -32,7 +32,7 @@ span{
     background-color: $articBackCol;
     z-index: 2;
     position: relative;
-    transform: translateY(-50%);
+    transform: translateY(-50%); //moves caption up for 50% of its height.
     padding: 14px 20px;
     display: inline-block;
     left: 2vw;
@@ -55,7 +55,7 @@ span{
   color: $logoCol;
   margin-bottom: 0;
   @media #{$tablet}{
-    font-size: 2.9em;
+    font-size: 2.9em; // Multiplier of the base font size (default 10px so this would be 29px)
   }
 }
 
