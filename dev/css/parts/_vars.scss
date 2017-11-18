@@ -1,0 +1,19 @@
+// Media Queries
+$smallMobile: 'only screen and (max-width: 479px)';
+$mobile: 'only screen and (min-width: 480px) and (max-width: 599px)';
+$porTablet: 'only screen and (min-width: 600px) and (max-width: 800px)';
+$tablet: 'only screen and (min-width: 801px) and (max-width: 1024px)';
+$laptop: 'only screen and (min-width: 1025px) and (max-width: 1281px)';
+$smToPor: 'only screen and (max-width: 800px)';
+
+// Fonts
+$sourceSans: 'Source Sans Pro', sans-serif;
+$sourceCode: 'Source Code Pro', monospace;
+
+// Colors
+$textCol: #111111;
+$hoverCol: #F5A623;
+$articBackCol: #ffffff;
+$mainBackCol: #efefef;
+$logoCol: #4A4A4A;
+$headGradient: linear-gradient(180deg, #80D0C7 0%, #BFD6DC 100%);

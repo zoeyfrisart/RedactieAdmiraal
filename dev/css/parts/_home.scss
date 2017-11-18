@@ -1,0 +1,78 @@
+@import '_vars';
+
+// Home Text article
+.home{
+  position: relative;
+  z-index: 3;
+  width: 450px;
+  transform: translateX(-25px);
+  @media #{$tablet}{
+    margin-top: 40px;
+    width: 425px;
+  }
+  @media #{$smToPor}{
+    width: 100%;
+    transform: translate(0);
+  }
+}
+
+span{
+  font-weight: bold;
+}
+
+// Drawing CSS
+.home--drawing{
+  width: 500px;
+  height: auto;
+  position: relative;
+  display: inline-block;
+  top: -100px;
+  left: 25px;
+  figcaption{
+    background-color: $articBackCol;
+    z-index: 2;
+    position: relative;
+    transform: translateY(-50%);
+    padding: 14px 20px;
+    display: inline-block;
+    left: 2vw;
+  }
+  @media #{$laptop} {
+    width: 400px;
+    top: -25px;
+  }
+  @media #{$tablet} {
+    top: -15px;
+    width: 350px;
+  }
+  @media #{$smToPor} {
+    display: none;
+  }
+}
+
+// Logo CSS
+.logo{
+  color: $logoCol;
+  @media #{$tablet}{
+    font-size: 2.9em;
+  }
+}
+
+// Header css home
+.home--banner{
+  @media #{$porTablet}{
+    background-image: url('../links/homepage_tekening@0,75x.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  @media #{$mobile}{
+    background-image: url('../links/homepage_tekening@0,5x.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  @media #{$smallMobile}{
+    background-image: url('../links/homepage_tekening@0,5x.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+}
