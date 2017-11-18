@@ -1,0 +1,65 @@
+@import '_vars';
+
+// IE11 and older browsers fallback.
+.schrijfwerk{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  section{
+    flex: 1 1 28%;
+    margin: 0 2.5% 25px;
+    @media only screen and (min-width: 801px) and (max-width: 1200px){
+      flex: 1 1 40%;
+      &:last-of-type {
+        flex: 1 1 100%;
+      }
+    }
+    @media #{$smToPor}{
+      flex: 1 1 80%;
+    }
+  }
+  a[role="button"]{
+    flex: 0;
+    white-space: nowrap;
+  }
+}
+
+// For Current browser line up CSS-grid
+@supports (display: grid) {
+  .schrijfwerk{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 5%;
+    grid-row-gap: 25px;
+    a[role="button"]{
+      grid-column: 5 / span 4;
+      @media #{$smToPor}{
+        grid-column: 3 / span 8;
+      }
+    }
+    section{
+      grid-column: span 4;
+      @media only screen and (max-width: 1200px){
+        grid-column: span 6;
+        &:last-of-type{
+          grid-column: 3 / span 8;
+        }
+      }
+      @media #{$smToPor}{
+        grid-column: 3 / span 8;
+      }
+      @media #{$mobile}{
+        grid-column: 2 / span 10;
+        &:last-of-type{
+          grid-column: 2 / span 10;
+        }
+      }
+      @media #{$smallMobile}{
+        grid-column: span 12;
+        &:last-of-type{
+          grid-column: span 12;
+        }
+      }
+    }
+  }
+}

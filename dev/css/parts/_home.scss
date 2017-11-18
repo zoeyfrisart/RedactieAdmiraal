@@ -53,6 +53,7 @@ span{
 // Logo CSS
 .logo{
   color: $logoCol;
+  margin-bottom: 0;
   @media #{$tablet}{
     font-size: 2.9em;
   }
