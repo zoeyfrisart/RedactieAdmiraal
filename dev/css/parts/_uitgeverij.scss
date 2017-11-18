@@ -1,0 +1,26 @@
+@import '_vars';
+
+.uitgeverij{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  h1{
+    flex: 1 1 100%;
+  }
+  section{
+    flex: 1 1 45%;
+    padding: 10px 2.5%;
+    img{
+      width: 40%;
+    }
+    .subDiv{
+      display: inline-flex;
+      flex-direction: column;
+      width: 50%;
+      a{
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
