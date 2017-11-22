@@ -33,6 +33,10 @@ p{
   line-height: 23px;
 }
 
+a{
+  color: $textCol;
+}
+
 // Header CSS
 header{
   height: 450px;
@@ -172,7 +176,7 @@ a[role="button"] {
 main{
   padding: 0 15%;
   // position: relative;
-  margin-top: -225px;
+  margin-top: -325px;
   margin-bottom: 150px;
   display: flex;
   justify-content: center;
@@ -209,13 +213,4 @@ article{
 // Spacer (make it so in Flexbox nav it fills the extra space
 .spacer{
   flex: 10 10 auto;
-}
-
-// To Prevent Alt-tag Forgot
-img:not([alt]){
-  border: 3px solid red;
-}
-
-img[alt=""]{
-  border: 3px solid darkorange;
 }

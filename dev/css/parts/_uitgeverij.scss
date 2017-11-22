@@ -17,9 +17,13 @@
       display: inline-flex;
       flex-direction: column;
       width: 50%;
+      flex-wrap: wrap;
       a{
         margin-top: 0;
         margin-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        white-space: wrap;
       }
     }
   }

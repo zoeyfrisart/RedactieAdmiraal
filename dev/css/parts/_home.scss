@@ -5,7 +5,7 @@
   position: relative;
   z-index: 3;
   width: 450px;
-  transform: translateX(-25px); // moves the Text block 25xp up.
+  transform: translateX(-10px); // moves the Text block 25xp up.
   @media #{$tablet}{
     margin-top: 40px;
     width: 425px;
@@ -26,7 +26,7 @@ span{
   height: auto; // To prevent the image of stretching.
   position: relative;
   display: inline-block;
-  top: -100px;
+  top: -25px;
   left: 25px;
   figcaption{
     background-color: $articBackCol;
